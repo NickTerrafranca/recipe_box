@@ -1,0 +1,29 @@
+body {
+  text-align: center;
+  font-family: 'nunito', sans-serif;
+  color:#FAF3BC;
+  background: #420600;
+  padding: 30px;
+}
+
+a {
+  color:#FAF3BC;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+a:hover {
+  color: red;
+}
+
+li{
+  list-style: none;
+}
+
+.nav {
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  color: red;
+  text-decoration: none;
+}

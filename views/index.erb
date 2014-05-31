@@ -8,3 +8,8 @@
     </li>
   <% end %>
 </ul>
+<% if @page >= 1 %>
+  <a class="nav" href="/recipes?page=<%=(@page - 1) %>">Previous page</a>
+<%end%>
+<a class="nav" href="/recipes?page=<%=(@page + 1) %>">Next page</a>
+

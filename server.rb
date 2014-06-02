@@ -10,23 +10,19 @@ def db_connection
   end
 end
 
-
 get '/recipes' do
   @page = params[:page].to_i
-
   query = "SELECT recipes.id, recipes.name AS recipe_name
   FROM recipes
   WHERE recipes.instructions IS NOT NULL
   ORDER BY recipes.name
   LIMIT 20
   OFFSET (20 * #{@page});"
-
   @recipes = db_connection do |conn|
     conn.exec_params(query)
   end
   erb :'index'
 end
-
 
 get '/recipes/:id' do
   recipe_id = params[:id]
